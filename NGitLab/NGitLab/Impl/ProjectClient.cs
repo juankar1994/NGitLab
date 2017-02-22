@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using NGitLab.Models;
 
 namespace NGitLab.Impl
@@ -51,7 +52,12 @@ namespace NGitLab.Impl
 
         public bool Delete(int id)
         {
-            return _api.Delete().To<Project>(Project.Url + "/" + id) == null;
+            return _api.Delete().To<bool>(Project.Url + "/" + id);
+        }
+
+        public Member AddMember(ProjectAddMember member)
+        {
+            return _api.Post().With(member).To<Member>(Project.Url + "/" + member.Id + "/members");
         }
     }
 }

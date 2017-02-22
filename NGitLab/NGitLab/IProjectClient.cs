@@ -23,6 +23,8 @@ namespace NGitLab
         Project this[int id] { get; }
 
         Project Create(ProjectCreate project);
+
+        Member AddMember(ProjectAddMember member);
         
         bool Delete(int id);
     }

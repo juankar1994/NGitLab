@@ -6,6 +6,7 @@ namespace NGitLab.Models
     [DataContract]
     public class UserUpsert
     {
+        
         [Required]
         [DataMember(Name = "email")]
         public string Email;
@@ -48,5 +49,11 @@ namespace NGitLab.Models
 
         [DataMember(Name = "can_create_group")]
         public bool CanCreateGroup;
+
+        [DataMember(Name = "confirm")]
+        public string Confirm;
+
+        [DataMember(Name = "reset_password")]
+        public bool ResetPassword;
     }
 }

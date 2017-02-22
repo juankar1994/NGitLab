@@ -2,11 +2,11 @@
 {
     public class FilesClientTests
     {
-        private readonly IFilesClient _client;
+        //private readonly IFilesClient _client;
 
-        public FilesClientTests()
-        {
-            _client = _RepositoryClientTests.RepositoryClient.Files;
-        }
+        //public FilesClientTests()
+        //{
+        //    _client = _RepositoryClientTests.RepositoryClient.Files;
+        //}
     }
 }

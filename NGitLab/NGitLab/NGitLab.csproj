@@ -69,11 +69,14 @@
     <Compile Include="IProjectHooksClient.cs" />
     <Compile Include="IRepositoryClient.cs" />
     <Compile Include="IUserClient.cs" />
+    <Compile Include="Models\AccessLevel.cs" />
     <Compile Include="Models\Assignee.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\BranchCreate.cs" />
     <Compile Include="Models\BranchRemovalStatus.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\ProjectAddMember.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Commit.cs" />
     <Compile Include="Models\CommitInfo.cs" />
@@ -99,9 +102,10 @@
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\SingleCommit.cs" />
     <Compile Include="Models\Tag.cs" />
-    <Compile Include="Models\TagCreate.cs" />
     <Compile Include="Models\TreeOrBlob.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserBlock.cs" />
+    <Compile Include="Models\UserChangePassword.cs" />
     <Compile Include="Models\UserUpsert.cs" />
     <Compile Include="Models\VisibilityLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

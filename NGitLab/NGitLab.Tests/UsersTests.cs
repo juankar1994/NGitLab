@@ -40,10 +40,10 @@ namespace NGitLab.Tests
         [Category("Server_Required")]
         public void GetUser()
         {
-            var user = _users[1];
+            var user = _users[3];
 
-            Assert.AreEqual("user", user.Username);
-            Assert.AreEqual(true, user.CanCreateGroup);
+            Assert.AreEqual("dev", user.Username);
+            Assert.AreEqual(false, user.CanCreateGroup);
         }
 
         [Test]
@@ -52,7 +52,7 @@ namespace NGitLab.Tests
         {
             var u = new UserUpsert
             {
-                Email = "test@test.pl",
+                Email = "test1@mobilize.net",
                 Bio = "bio",
                 CanCreateGroup = true,
                 IsAdmin = true,
@@ -71,7 +71,7 @@ namespace NGitLab.Tests
             Assert.AreEqual(u.Bio, addedUser.Bio);
 
             u.Bio = "Bio2";
-            u.Email = "test@test.pl";
+            u.Email = "test1@mobilize.net";
 
             var updatedUser = _users.Update(addedUser.Id, u);
             Assert.AreEqual(u.Bio, updatedUser.Bio);
