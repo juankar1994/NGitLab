@@ -52,29 +52,23 @@ namespace NGitLab.Tests
         {
             var u = new UserUpsert
             {
-                Email = "test1@mobilize.net",
-                Bio = "bio",
+                Email = "test1@organization1.net",
                 CanCreateGroup = true,
                 IsAdmin = true,
-                Linkedin = null,
                 Name = "sadfasdf",
                 Password = "!@#$QWDRQW@",
                 ProjectsLimit = 1000,
-                Provider = "provider",
-                Skype = "skype",
-                Twitter = "twitter",
-                Username = "username",
-                WebsiteURL = "wp.pl"
+                Organization = "organization1.net"
             };
 
             var addedUser = _users.Create(u);
-            Assert.AreEqual(u.Bio, addedUser.Bio);
+            Assert.AreEqual(u.Organization, addedUser.Organization);
 
-            u.Bio = "Bio2";
-            u.Email = "test1@mobilize.net";
+            u.Organization = "organization1.com";
+            u.Email = "test1@organization1.net";
 
             var updatedUser = _users.Update(addedUser.Id, u);
-            Assert.AreEqual(u.Bio, updatedUser.Bio);
+            Assert.AreEqual(u.Organization, updatedUser.Organization);
 
             _users.Delete(addedUser.Id);
         }

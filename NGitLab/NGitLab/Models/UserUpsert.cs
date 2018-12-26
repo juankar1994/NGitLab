@@ -23,26 +23,11 @@ namespace NGitLab.Models
         [DataMember(Name = "name")]
         public string Name;
 
-        [DataMember(Name = "skype")]
-        public string Skype;
-
-        [DataMember(Name = "linkedin")]
-        public string Linkedin;
-
-        [DataMember(Name = "twitter")]
-        public string Twitter;
-
-        [DataMember(Name = "website_url")]
-        public string WebsiteURL;
+        [DataMember(Name = "organization")]
+        public string Organization;
 
         [DataMember(Name = "projects_limit")]
         public int ProjectsLimit;
-
-        [DataMember(Name = "provider")]
-        public string Provider;
-
-        [DataMember(Name = "bio")]
-        public string Bio;
 
         [DataMember(Name = "admin")]
         public bool IsAdmin;
@@ -50,8 +35,8 @@ namespace NGitLab.Models
         [DataMember(Name = "can_create_group")]
         public bool CanCreateGroup;
 
-        [DataMember(Name = "confirm")]
-        public string Confirm;
+        [DataMember(Name = "skip_confirmation")]
+        public bool SkipConfirmation;
 
         [DataMember(Name = "reset_password")]
         public bool ResetPassword;

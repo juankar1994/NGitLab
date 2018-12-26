@@ -67,5 +67,8 @@ namespace NGitLab.Models
 
         [DataMember(Name="can_create_project")]
         public bool CanCreateProject;
+
+        [DataMember(Name = "organization")]
+        public string Organization;
     }
 }
