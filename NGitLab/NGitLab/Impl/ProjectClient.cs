@@ -59,5 +59,10 @@ namespace NGitLab.Impl
         {
             return _api.Post().With(member).To<Member>(Project.Url + "/" + member.Id + "/members");
         }
+
+        public void DeleteMember(int projectId, int userId)
+        {
+            _api.Delete().To<object>(Project.Url + "/" + projectId + "/members/" + userId);
+        }
     }
 }

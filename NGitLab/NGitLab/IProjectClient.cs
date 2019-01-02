@@ -26,6 +26,8 @@ namespace NGitLab
 
         Member AddMember(ProjectAddMember member);
 
+        void DeleteMember(int projectId, int userId);
+        
         bool Delete(int id);
     }
 }
